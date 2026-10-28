@@ -65,7 +65,7 @@ export default function LandingPage() {
           <p className="text-xl font-light text-slate-300">
             TanStack Start is coming. The best way to use Convex with Start is
             via React Query's excellent Start integration. This site is{' '}
-            <a href="https://github.com/get-convex/convex-tanstack-start/">
+            <a href="https://github.com/convex/convex-tanstack-start/">
               written with Start
             </a>{' '}
             using this setup.
