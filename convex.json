@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/get-convex/convex-backend/refs/heads/main/npm-packages/convex/schemas/convex.schema.json",
+  "$schema": "https://raw.githubusercontent.com/convex/convex-backend/refs/heads/main/npm-packages/convex/schemas/convex.schema.json",
   "node": {
     "nodeVersion": "22"
   }
