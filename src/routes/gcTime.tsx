@@ -1,10 +1,17 @@
-import { Link, createFileRoute } from '@tanstack/react-router'
+import { ClientOnly, Link, createFileRoute } from '@tanstack/react-router'
 import CodeSample from '~/components/CodeSample'
 import Chat from '~/components/Chat'
-import { ReactQueryDevtools } from '@tanstack/react-query-devtools/production'
-import { useState } from 'react'
+import { Suspense, lazy, useState } from 'react'
 import { Button } from '../components/ui/button'
 import { Card, CardContent, CardHeader } from '../components/ui/card'
+
+// The devtools touch `window` when their module loads, so load them only in
+// the browser.
+const ReactQueryDevtools = lazy(() =>
+  import('@tanstack/react-query-devtools/production').then((m) => ({
+    default: m.ReactQueryDevtools,
+  })),
+)
 
 export const Route = createFileRoute('/gcTime')({
   component: QueryCaching,
@@ -139,7 +146,11 @@ const { data, isPending } = useQuery({
 });`}
         />
       </div>
-      <ReactQueryDevtools initialIsOpen={open} />
+      <ClientOnly>
+        <Suspense fallback={null}>
+          <ReactQueryDevtools initialIsOpen={open} />
+        </Suspense>
+      </ClientOnly>
     </>
   )
 }
