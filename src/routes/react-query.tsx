@@ -128,7 +128,7 @@ const { data } = useQuery({
       </p>
       <p>
         The{' '}
-        <a href="https://github.com/get-convex/convex-react-query">
+        <a href="https://github.com/convex/convex-react-query">
           @convex-dev/react-query
         </a>{' '}
         library links the TanStack Query Client with the Convex client

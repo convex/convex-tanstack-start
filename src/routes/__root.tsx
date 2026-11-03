@@ -101,7 +101,7 @@ export default function RootLayout({
               </li>
             </ul>
             <a
-              href="https://github.com/get-convex/convex-tanstack-start/"
+              href="https://github.com/convex/convex-tanstack-start/"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 rounded-md hover:bg-slate-800 transition-colors inline-flex items-center gap-2 font-medium"
